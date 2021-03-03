@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestSettings name="LocalTestSettings" id="b12ae2c7-e72b-4ac6-8433-0991d2a16d1f" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Description>Local test settings. Deploy app config.</Description>
+  <Deployment>
+    <DeploymentItem filename="WebCore\App.config" />
+  </Deployment>
+  <Execution>
+    <TestTypeSpecific>
+      <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+        <AssemblyResolution>
+          <TestDirectory useLoadContext="true" />
+        </AssemblyResolution>
+      </UnitTestRunConfig>
+    </TestTypeSpecific>
+    <AgentRule name="LocalMachineDefaultRole">
+    </AgentRule>
+  </Execution>
+  <Properties />
+</TestSettings>

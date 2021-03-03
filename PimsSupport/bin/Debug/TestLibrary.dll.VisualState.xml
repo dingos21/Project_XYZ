@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ShowCheckBoxes="false">
+  <TopNode>2-1120</TopNode>
+  <SelectedNode>2-1090</SelectedNode>
+  <SelectedCategories>
+    <string>ASmokeTests</string>
+    <string>CPIBillingTests</string>
+    <string>ReportsWidgetTests</string>
+    <string>SearchTests</string>
+    <string>UsersTests</string>
+    <string>ClaimsTests</string>
+    <string>VerifyDataTests</string>
+  </SelectedCategories>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node Id="2-1120" Expanded="true" />
+    <Node Id="2-1121" Expanded="true" />
+    <Node Id="2-1089" Expanded="true" />
+  </Nodes>
+</VisualState>

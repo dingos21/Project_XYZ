@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" name="TestLibrary.dll" fullname="C:\Users\OTurkakin\source\Workspaces\PimsSupport_DD1\Tests\bin\Debug\TestLibrary.dll" testcasecount="22" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2021-02-19 13:44:23Z" end-time="2021-02-19 13:45:13Z" duration="49.880032">
+  <command-line><![CDATA["C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\PROFESSIONAL\COMMON7\IDE\EXTENSIONS\TESTPLATFORM\Extensions\..//testhost.x86.exe"  --port 50831 --endpoint 127.0.0.1:050831 --role client --parentprocessid 29140 --datacollectionport 0 --telemetryoptedin true]]></command-line>
+  <filter>
+    <test>Tests.LoginTest_dd0("chrome").ReadingCredentialsFromExel_03</test>
+  </filter>
+  <test-suite type="Assembly" id="0-1030" name="TestLibrary.dll" fullname="C:\Users\OTurkakin\source\Workspaces\PimsSupport_DD1\Tests\bin\Debug\TestLibrary.dll" runstate="Runnable" testcasecount="22" result="Passed" start-time="2021-02-19 13:44:23Z" end-time="2021-02-19 13:45:13Z" duration="49.829269" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\OTurkakin\AppData\Local\Temp" machine-name="LPF22YXWQ-1123" user="oturkakin" user-domain="ELDREDGE_A" culture="en-US" uiculture="en-US" os-architecture="x86" />
+    <settings>
+      <setting name="SynchronousEvents" value="False" />
+      <setting name="InternalTraceLevel" value="Off" />
+      <setting name="RandomSeed" value="1773932574" />
+      <setting name="TestParametersDictionary" value="[webAppUrl, http://pims-test.alliedsolutions.net/PimsSupport/Account/Login], [IsRemote, False]">
+        <item key="webAppUrl" value="http://pims-test.alliedsolutions.net/PimsSupport/Account/Login" />
+        <item key="IsRemote" value="False" />
+      </setting>
+      <setting name="TestParameters" value="webAppUrl=http://pims-test.alliedsolutions.net/PimsSupport/Account/Login;IsRemote=False" />
+      <setting name="ProcessModel" value="InProcess" />
+      <setting name="DomainUsage" value="Single" />
+      <setting name="DefaultTestNamePattern" value="{m}{a}" />
+      <setting name="WorkDirectory" value="C:\Users\OTurkakin\source\Workspaces\PimsSupport_DD1\Tests\bin\Debug" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="RuntimeFramework" value="net-4.0" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="34020" />
+      <property name="_APPDOMAIN" value="domain-3f9fe553-TestLibrary.dll" />
+    </properties>
+    <test-suite type="TestSuite" id="0-1031" name="Tests" fullname="Tests" runstate="Runnable" testcasecount="22" result="Passed" start-time="2021-02-19 13:44:23Z" end-time="2021-02-19 13:45:13Z" duration="49.814050" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestFixture" id="0-1007" name="LoginTest_dd0(&quot;chrome&quot;)" fullname="Tests.LoginTest_dd0(&quot;chrome&quot;)" classname="Tests.LoginTest_dd0" runstate="Runnable" testcasecount="3" result="Passed" start-time="2021-02-19 13:44:23Z" end-time="2021-02-19 13:45:13Z" duration="49.810219" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <test-case id="0-1010" name="ReadingCredentialsFromExel_03" fullname="Tests.LoginTest_dd0(&quot;chrome&quot;).ReadingCredentialsFromExel_03" methodname="ReadingCredentialsFromExel_03" classname="Tests.LoginTest_dd0" runstate="Runnable" seed="1328887049" result="Passed" start-time="2021-02-19 13:44:24Z" end-time="2021-02-19 13:45:02Z" duration="37.344758" asserts="0">
+          <properties>
+            <property name="Description" value="Navigate to Home/Dashboard page and validate side menu components/ links existt." />
+            <property name="Category" value="SmokeTesting" />
+          </properties>
+          <output><![CDATA[userName1 :  iince
+password1 :  Almanya2016
+
+Object reference not set to an instance of an object.
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
