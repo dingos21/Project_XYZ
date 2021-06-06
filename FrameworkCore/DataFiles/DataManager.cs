@@ -12,10 +12,11 @@ namespace FrameworkCore.DataFiles
         List<object[]> Credentials = new List<object[]>();
         public DataManager()
         {
-            Credentials.Add(new object[] { "oturkakin", "ho17%#AK" });
-            Credentials.Add(new object[] { "oturkakin", "ho17%#AK" });
-            Credentials.Add(new object[] { "oturkakin", "ho17%#AK" });
-            Credentials.Add(new object[] { "oturkakin", "ho17%#AK" });
+            Credentials.Add(new object[] { "userName1", "password1" });
+            Credentials.Add(new object[] { "userName2", "password2" });
+            Credentials.Add(new object[] { "userName3", "password3" });
+            Credentials.Add(new object[] { "userName4", "password4" });
+
         }
         public IEnumerator GetEnumerator()
         {
@@ -23,15 +24,6 @@ namespace FrameworkCore.DataFiles
         }
 
 
-
-
-        //public static object[] Credentialss =
-        //{
-        //    new object[] { "oturkakin", "ho17%#AK" },
-        //    new object[] { "oturkakin", "ho17%#AK" },
-        //    //new object[] { "oturkakin", "ho17%#AK" },
-        //    //new object[] { "oturkakin", "ho17%#AK" },
-        //};
     }
 }
 

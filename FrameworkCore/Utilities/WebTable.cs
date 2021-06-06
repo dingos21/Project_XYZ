@@ -72,21 +72,6 @@ namespace FrameworkCore.Utilities
         }
 
 
-        public bool ValidatePageURL() { return pageURL.getURL().Contains(ExpectedPageURL); }
-        //public bool ValidatePageTitleEnabled1() { return pageTitleClientAliases.IsPresent() ; }
-        //public bool ValidatePageTitleEnabled2() { return pageTitleClientAliases.IsInteractable(); }
-        public bool ValidatePageTitleEnabled() { return pageTitleClientAliases.IsPresent() && pageTitleClientAliases.IsInteractable(); }
-        public bool ValidateFooterEnabled() { return footerClientAliases.IsPresent() && footerClientAliases.IsInteractable(); }
-        public bool ValidatecolumnEfectiveDateEnabled() { return columnEfectiveDate.IsPresent() && columnEfectiveDate.IsInteractable(); }
-        public bool ValidatecolumnSLXIDEnabled() { return columnSLXID.IsPresent() && columnSLXID.IsInteractable(); }
-        //public bool ValidateColumnNameEfectiveDate() { return columnEfectiveDate.GetText().ToString().Equals(columnNameEfectiveDate); }
-        //public bool ValidateColumnNameSLXID() { return columnSLXID.GetText().ToString().Equals(columnNameSLXID); }
-
-        public string getURL() { return pageURL.getURL(); }
-        public string getPageTitle_ClientAliases() { return pageTitleClientAliases.GetText().ToString(); }
-
-        //public bool ValidateEnabled() { return .IsPresent() && .IsInteractable(); }
-
 
 
         private void ActivateSubMenus(WebElementProxy webElement)
@@ -95,34 +80,6 @@ namespace FrameworkCore.Utilities
             action.MoveToElement(webElement.Get()).Click().Build().Perform();
         }
 
-        //public void GoToRoles()
-        //{
-        //    rolesSubMenu.Get().Click();
-        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-        //    wait.Until(drv => drv.Url.Contains(rolesURL));
-        //}
 
-        //public void GoToGroups()
-        //{
-        //    ActivateSubMenus(pimsSupportMenu);
-        //    ActivateSubMenus(centerPointAdminSubMenu);
-        //    groupsSubMenu.Get().Click();
-        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-        //    wait.Until(drv => drv.Url.Contains(groupsURL));
-        //}
-
-        //public void ClickBondMenu() { bondMenu.Click(); }
-        //public void ClickCapsMenu() { capsMenu.Click(); }
-
-
-        //protected override void ExecuteLoad()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //protected override bool EvaluateLoadedStatus()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

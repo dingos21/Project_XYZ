@@ -1,0 +1,250 @@
+﻿
+
+
+int now= Time.now();
+while(true)
+{
+  tryMethod();
+  if(now > now+5000) throw new TimeoutException();
+}
+
+------------------------------------------------------------------------------------------------------
+
+
+Stopwatch sw = new Stopwatch();
+sw.Start();
+while(true)
+{
+    tryMethod();
+    if(sw.ElapsedMilliseconds > 5000) throw new TimeoutException();
+}
+
+------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Timers;
+class Program
+{
+    public delegate void tm();
+    static void Main(string[] args)
+    {
+        var t = new tm(tryMethod);
+        var timer = new Timer();
+        timer.Interval = 5000;
+        timer.Start();
+        timer.Elapsed += (sender, e) => timer_Elapsed(t);
+        t.BeginInvoke(null, null);
+    }
+    static void timer_Elapsed(tm p)
+    {
+        p.EndInvoke(null);
+        throw new TimeoutException();
+    }
+    static void tryMethod()
+    {
+        Console.WriteLine("FooBar");
+    }
+}
+
+------------------------------------------------------------------------------------------------------
+
+For parallel testing 
+randomGenerator = new Random();
+int index = randomGenerator.nextInt(catalogue.size());
+Item it = catalogue.get(index);
+
+------------------------------------------------------------------------------------------------------
+
+if clear method is not working, then you can use             
+
+webelement.SendKeys(Keys.Control + "a" + Keys.Delete);
+
+------------------------------------------------------------------------------------------------------
+
+Isaac Ince
+public void SetPreviousPasswordRememberedInput(string number)
+    {​​​​​​​
+        var previousPasswordRememberedInput = driver.FindElement(By.Id("SystemAdmin__SystemManagementPassword__Input--previousPassword"));
+        IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
+        jse.ExecuteScript("arguments[0].value = '';", previousPasswordRememberedInput);
+        jse.ExecuteScript("arguments[0].value='" + number + "';", previousPasswordRememberedInput);
+    }​​​​​​​
+
+------------------------------------------------------------------------------------------------------
+
+count of dropdown elements
+[12:58 PM] Isaac Ince - AddRange  
+    
+        public void CloseWalkMeDialogIfPresent()
+        {​​​​​​​
+            //Force Sleep statement due to Load Time of WalkMe Links
+            Thread.Sleep(5000);
+            List<IWebElement> closeWalkMeLinks = new List<IWebElement>();
+            closeWalkMeLinks.AddRange(driver.FindElements(By.CssSelector(".walkme-action-close")));
+
+
+            if (closeWalkMeLinks.Count > 0) {​​​​​​​ closeWalkMeLinks[0].Click(); }​​​​​​​
+        }​​​​​​​
+
+------------------------------------------------------------------------------------------------------
+
+count of dropdown elements
+int number = webElement.Options.Count ;
+------------------------------------------------------------------------------------------------------
+int relationshipIdNumber = Int32.Parse(relationshipIdNmb);
+------------------------------------------------------------------------------------------------------
+string s = DateTime.Now.ToString("yyyyMMddhhmm");
+------------------------------------------------------------------------------------------------------
+string s1 = "05/29/2020";
+string s2 = "04/22/2021";
+
+            var t1 = DateTime.Parse(s1);
+            var t2 = DateTime.Parse(s2);
+            Console.WriteLine(t1);
+            Console.WriteLine(t2);
+            Console.WriteLine(DateTime.Compare(t1, t2));
+------------------------------------------------------------------------------------------------------
+        
+        //============================================
+        //  Tests Database Connection
+        //--------------------------------------------
+
+        //[Test, Description("Verify Pims Support Database Coinnection")]
+        [Category("Regression")]
+        [Order(25)]
+        public void DatabaseConnection()
+        {
+            loginPage.Login(User.USER2);
+            String query = "Select *FROM [PremAcc3].[dbo].[Relationships] where Relationship_ID_Number = 1665";
+            String query2 = "Select * FROM [PremAcc3].[dbo].[Relationships]";
+
+            //List<String> columnValues = DatabaseHelper.getDatabaseTableCertainColumnValues(Utilities.GetConnectionString(), query2, "Client_ID_Number");
+            //Console.WriteLine("========================================================================================1");
+            DatabaseHelper.getDatabaseTableCertainColumnValues(Utilities.GetConnectionString(), query2, "Client_ID_Number");
+            //Console.WriteLine("========================================================================================2");
+            //DatabaseHelper.getDatabaseTableCellValue(Utilities.GetConnectionString(), query2, 1, 2);
+            //Console.WriteLine("========================================================================================3");
+            //DatabaseHelper.getDatabaseTableCellValue(Utilities.GetConnectionString(), query2, 1, "Relationship_ID_Number");
+            //Console.WriteLine("========================================================================================4");
+            //DatabaseHelper.getDatabaseTableCellValue(Utilities.GetConnectionString(), query2, 1, "Relationship_ID");
+            //Console.WriteLine("========================================================================================5");
+            //DatabaseHelper.getColumnNames_Query(Utilities.GetConnectionString(), query2);
+            //Console.WriteLine("========================================================================================6");
+            //-----------
+            //Console.WriteLine(relationshipsPage.getRatesDetailsEffectiveDate());
+            //DatabaseHelper.getDatabaseTableCellValue(Utilities.GetConnectionString(), query, 1, "Effective_Date");
+            //Console.WriteLine("====================================");
+            //Console.WriteLine(relationshipsPage.getRatesDetailsMaximumCoverageTerm());
+            //DatabaseHelper.getDatabaseTableCellValue(Utilities.GetConnectionString(), query, 1, "Maximum_Coverage_Term");
+            //Console.WriteLine("====================================");
+            //Console.WriteLine(relationshipsPage.getRatesDetailsCreated());
+            //DatabaseHelper.getDatabaseTableCellValue(Utilities.GetConnectionString(), query, 1, "Created");
+            //Console.WriteLine("====================================");
+            //Console.WriteLine(relationshipsPage.getRatesDetailsModified());
+            //DatabaseHelper.getDatabaseTableCellValue(Utilities.GetConnectionString(), query, 1, "Modified");
+            //Console.WriteLine("====================================");
+            //Console.WriteLine(relationshipsPage.getRatesDetailsUserName());
+            //DatabaseHelper.getDatabaseTableCellValue(Utilities.GetConnectionString(), query, 1, "User_ID");
+            //Console.WriteLine("====================================");
+        }
+
+        //============================================
+        //  TestingTest 
+        //--------------------------------------------
+
+        //[Test, Description("...")]
+        public void TesTingTesT()
+        {
+
+            loginPage.Login(Utilities.GetUserName(), Utilities.GetPassword());
+            Console.WriteLine("userName      : " + Utilities.GetUserName());
+            Console.WriteLine("Password      : " + Utilities.GetPassword());
+
+        }
+        // [Test, Description("...")]
+        public void TesTingTesTt()
+        {
+            loginPage.Login(User.USER2);
+            string a = "abcdefghijklmnoprqstuvwxyz";
+            string b = "ABCDEFGHIJKLMNOPRQSTUVWXYZ";
+            string c = "0123456789";
+            for (int i = 0; i < a.Length; i++)
+                Console.WriteLine(((int)a[i]) + " - " + ((int)b[i]));
+            for (int i = 0; i < c.Length; i++)
+                Console.WriteLine(((int)c[i]));
+        }
+
+        // [Test, Description("...")]
+        public void TesTingTesTtt()
+        {
+            loginPage.Login(User.USER2);
+            relationshipsPage.getWebTableColumnList("State", 20);
+        }
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------

@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace FrameworkCore.Utilities
-
 {
     public class ExcelOperations1
     {
@@ -19,21 +18,30 @@ namespace FrameworkCore.Utilities
         {
             stream = File.Open(fileURL, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-
-
-            // to not get first row as data set
-            DataSet resultSet = excelReader.AsDataSet(new ExcelDataSetConfiguration()
+            try
             {
-                ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
+                // to not get first row as data set
+                DataSet resultSet = excelReader.AsDataSet(new ExcelDataSetConfiguration()
                 {
-                    UseHeaderRow = true
-                }
-            });
-            DataTableCollection table = resultSet.Tables;
-            DataTable resultTable = table[SheetName];               // Sheet Name
-            //stream.Flush();
-            stream.Close();
-            return resultTable;
+                    ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
+                    {
+                        UseHeaderRow = true
+                    }
+                });
+                DataTableCollection table = resultSet.Tables;
+                DataTable resultTable = table[SheetName];               // Sheet Name
+                return resultTable;
+            }
+            catch (Exception e)
+            {
+                throw null;
+            }
+             finally
+            {
+                stream.Flush();
+            }
+            stream.Flush();
+
         }
 
         public class Datacollection
@@ -75,19 +83,38 @@ namespace FrameworkCore.Utilities
                 string data = (from colData in dataCol where colData.colName == columnName && colData.rowNumber == rowNumber select colData.colValue).SingleOrDefault();
                 return data.ToString();
             }
-#pragma warning disable CS0168 // The variable 'e' is declared but never used
             catch (Exception e)
-#pragma warning restore CS0168 // The variable 'e' is declared but never used
             {
                 return null;
             }
             finally
             {
-                //stream.Flush();
-                //stream.Close();
+                stream.Close();
             }
-
         }
+
+        public static List<string> getColumnData(int rowNumber, string columnName)
+        {
+            List<string> colElements = new List<string>();
+            try
+            {
+                for (int i = 1; i <= rowNumber; i++)
+                {
+                    string data = (from colData in dataCol where colData.colName == columnName && colData.rowNumber == i select colData.colValue).SingleOrDefault();
+                    colElements.Add(data.ToString());
+                }
+                return colElements;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            finally
+            {
+                stream.Close();
+            }
+        }
+
 
 
     }

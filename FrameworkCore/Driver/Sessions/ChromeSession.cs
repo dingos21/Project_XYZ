@@ -16,6 +16,8 @@ namespace FrameworkCore.Driver
             //Debugging statements for handling headless testing
             //options.AddArgument("--headless");
             //options.AddArgument("--window-size=1280,1024");
+            //options.AddArgument("--disable-infobars");
+            //options.AcceptInsecureCertificates=true;
             return options;
         }
     }

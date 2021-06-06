@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FrameworkCore",
+    "\\Project_XYZ"
   ],
+  "SelectedNode": "\\Project_XYZ.sln",
   "PreviewInSolutionExplorer": false
 }
